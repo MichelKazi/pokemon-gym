@@ -1,10 +1,7 @@
 export class Trainer {
     constructor(name) {
         this.name = name
-        this.pokemonList = []
-        this.equipped = null
-        this.pokeballs = 4
-
+        this.team = Array.size(3).fill(0)
         //binding this keyword for methods
         this.all = this.all.bind(this)
         this.addPokemon = this.addPokemon.bind(this)
@@ -37,19 +34,6 @@ export class Trainer {
         this.pokeballs++
     }
 
-    get(pokemon) {
-        if (this.pokemonList.includes(pokemon))
-            return this.pokemonList[this.pokemonList.indexOf(pokemon)]
-        return null
-    }
-
-    equip(pokemon) {
-        this.removePokemon(pokemon)
-        this.pokeballs--
-        this.pokemonList.push(this.equipped)
-        this.equipped = null
-        this.equipped = pokemon
-    }
-
 }
 export default Trainer
+
