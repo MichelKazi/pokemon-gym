@@ -8,7 +8,6 @@ class Trainer {
         // this.get = this.get.bind(this)
         // this.equip = this.equip.bind(this)
     }
-
     all() {
         return this.team
     }
