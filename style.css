@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'XalTerion';
+    src: url('XalTerion.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+}
+
+#main-grid {
+    display: grid;
+    grid-template: auto / auto auto auto;
+    grid-template-areas:
+        "erin michel brian";
+    width: 100%;
+    height: 100vh;
+}
+
+#erin-grid {
+    grid-area: erin;
+    background-image: url(https://external-preview.redd.it/98jgcKpucR-OEo8fdGCHN8B9cyFrjZO4tpIXCnq-gqw.jpg?auto=webp&s=4f78433eab2e39849ac3a258d48a0440b36ff41a);
+    background-size: cover;
+}
+
+#michel-grid {
+    grid-area: michel;
+    background-image: url(https://cdnb.artstation.com/p/assets/images/images/000/164/693/large/ned-rogers-157912-white-dragon-lair-final-web.jpg?1407852798);
+    background-size: cover;
+}
+
+#brian-grid {
+    grid-area: brian;
+    background-image: url(https://wallpaperplay.com/walls/full/2/a/f/149356.jpg);
+    background-size: cover;
+}
+
+.trainer-col {
+    height: 100vh;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+}
+
+.trainer-content:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    /* width: 100vw; */
+}
+
+.trainer-content {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.5);
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 2em;
+
+    display: grid;
+    grid-template: 10% 30% 10% / auto;
+    grid-template-areas:
+        "name"
+        "sprite"
+        "type";
+    grid-row-gap: 2%;
+    justify-items: center;
+}
+
+.name {
+    grid-area: name;
+}
+
+.sprite {
+    grid-area: sprite;
+    height: 120%;
+}
+
+.type {
+    grid-area: type;
+}
+
+#erin-pokemon-party {
+    width: 100%;
+
+    display: grid;
+
+    grid-template: auto / auto auto auto;
+}
+
+#michel-pokemon-party {
+    width: 100%;
+
+    display: grid;
+
+        grid-template: auto / auto auto auto;
+
+}
+
+#brian-pokemon-party {
+    width: 100%;
+
+    display: grid;
+    
+    grid-template: auto / auto auto auto;
+
+}
