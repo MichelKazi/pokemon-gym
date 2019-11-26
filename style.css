@@ -70,8 +70,10 @@ body {
     justify-items: center;
 }
 
-.name {
+name {
     grid-area: name;
+
+    font-size:10%;
 }
 
 .sprite {
