@@ -5,9 +5,6 @@ const michel = new Trainer('Michel')
 
 
 
-
-
-
 const [ erin, brian, michel ] = trainers
 
 

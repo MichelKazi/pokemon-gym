@@ -19,7 +19,7 @@ michelGrid.addEventListener('click', () => {
             setTimeout(() => {
                 mainGrid.style.gridTemplateColumns = `33.33% ${99 - i}.33% 33.33%`
 
-                expandnames(erinPokemonNames)
+                expandnames(michelPokemonNames)
             }, i * 5)
         }
     } else {
@@ -78,3 +78,10 @@ erinGrid.addEventListener('click', () => {
     }
     console.log("you clicked on gym leader Erin")
 })
+
+
+expandNames = (expandNames) => {
+    for(let i = 0; i < expandNames[i].length; i++) {
+        expandNames[i]
+    }
+}

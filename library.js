@@ -171,7 +171,6 @@ async function getPokemon(pokemonName) {
         return Promise.resolve(createPokemon(response))
 
     } catch (err) {
-        // error.innerHTML = "There was an error please try again."
         console.log(err);
     }
 }
@@ -184,7 +183,6 @@ async function getPokemonDescription(url) {
 
         setDResponse(response)
     } catch (err) {
-        // error.innerHTML = "There was an error please try again."
         console.log(err);
         
     }
@@ -200,6 +198,8 @@ function createPokemon(response) {
     for (const i = 0; i < 6; i++) {
         pokemon.setAStat(response["stats"][i]["stat"]["name"], response["stats"][i]["base_stat"])
     }
+    response.stats.map(resStat=> pokemon.setAStat(resStat.stat.name, resStat.stat.base_stat))
+
 
     pokemon.setHeight(response["height"])
     pokemon.setWeight(response["weight"])
@@ -212,19 +212,9 @@ function createPokemon(response) {
         pokemon.setImg(response["sprites"]["front_default"])
         pokemon.setGif(response["sprites"]["front_default"])
     }
-
-    //abilities
-    // for (const i = 0; i < response["abilities"].length; i++) {
-    //     pokemon.abilities.push(response["abilities"][i]["ability"]["name"])
-    // }
     
     response.abilities.map(resAbilities=> pokemon.abilities.push(resAbilities.ability.name))
 
-
-    //types
-    // for (const i = 0; i < response["types"].length; i++) {
-    //     pokemon.type.push(response["types"][i]["type"]["name"])
-    // }
     response.types.map(resTypes=> resTypes.type.name )
 
     //description
