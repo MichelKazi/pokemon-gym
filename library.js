@@ -156,26 +156,13 @@ class Pokemon {
 
 async function createPokemon(pokemonName) {
   try {
-    const request = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}/`)
-    const response = await request.json()
+    let request = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}/`)
+    let response = await request.json()
     console.log(response)
     return Promise.resolve(queryPokemon(response))
 
   } catch (err) {
     console.log(err);
-  }
-}
-
-
-async function getPokemonDescription(url) {
-  try {
-    const request = await fetch(url)
-    const response = await request.json()
-
-    setDResponse(response)
-  } catch (err) {
-    console.log(err);
-
   }
 }
 
@@ -186,9 +173,6 @@ function queryPokemon(response) {
 
   pokemon.setId(response["id"])
 
-  for (const i = 0; i < 6; i++) {
-    pokemon.setAStat(response["stats"][i]["stat"]["name"], response["stats"][i]["base_stat"])
-  }
   response.stats.map(resStat => pokemon.setAStat(resStat.stat.name, resStat.stat.base_stat))
 
 
@@ -208,16 +192,7 @@ function queryPokemon(response) {
 
   response.types.map(resTypes => resTypes.type.name)
 
-  //description
-  getPokemonDescription(response["species"]["url"])
-
   return pokemon
 }
 
-function setDResponse(desc) {
-  pokemon.setDescription(desc["genera"][2]["genus"])
-  pokemon.setColor(desc["color"]["name"])
-
-  // displayPokemon()
-}
 
