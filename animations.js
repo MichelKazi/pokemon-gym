@@ -4,6 +4,10 @@ let erinGrid = document.getElementById('erin-grid')
 
 let mainGrid = document.getElementById('main-grid')
 
+let erinPokemonNames = document.getElementsByClassName('erin-pokemon-names')
+let michelPokemonNames = document.getElementsByClassName('michel-pokemon-names')
+let brianPokemonNames = document. getElementsByClassName('brian-pokemon-names')
+
 let erinPokemon1Name = document.getElementById('erin-pokemon-1-name')
 let michelPokemon1Name = document.getElementById('michel-pokemon-1-name')
 let brianPokemon1Name = document.getElementById('brian-pokemon-1-name')
@@ -14,6 +18,8 @@ michelGrid.addEventListener('click', () => {
         for(let i = 0; i < 67; i++) {
             setTimeout(() => {
                 mainGrid.style.gridTemplateColumns = `33.33% ${99 - i}.33% 33.33%`
+
+                expandnames(erinPokemonNames)
             }, i * 5)
         }
     } else {
@@ -72,3 +78,13 @@ erinGrid.addEventListener('click', () => {
     }
     console.log("you clicked on gym leader Erin")
 })
+
+
+
+expand = (classNames) => {
+    for(let i = 0; i < classNames.length; i++) {
+        setTimeout(() => {
+            classNames[i].style.width = `${}`
+        }, i)
+    }
+}
