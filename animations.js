@@ -78,13 +78,3 @@ erinGrid.addEventListener('click', () => {
     }
     console.log("you clicked on gym leader Erin")
 })
-
-
-
-expand = (classNames) => {
-    for(let i = 0; i < classNames.length; i++) {
-        setTimeout(() => {
-            classNames[i].style.width = `${}`
-        }, i)
-    }
-}
