@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'XalTerion';
+    src: url('XalTerion.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html {
     overflow: hidden;
 }
@@ -17,19 +24,19 @@ body {
 
 #erin-grid {
     grid-area: erin;
-    background-image: url(https://pbs.twimg.com/media/Dogeo9ZX4AAvf_Y.jpg);
+    background-image: url(https://external-preview.redd.it/98jgcKpucR-OEo8fdGCHN8B9cyFrjZO4tpIXCnq-gqw.jpg?auto=webp&s=4f78433eab2e39849ac3a258d48a0440b36ff41a);
     background-size: cover;
 }
 
 #michel-grid {
     grid-area: michel;
-    background-image: url(https://i.pinimg.com/originals/9e/f4/fb/9ef4fbc2ac40b5bda13bc7abb9613676.jpg);
+    background-image: url(https://cdnb.artstation.com/p/assets/images/images/000/164/693/large/ned-rogers-157912-white-dragon-lair-final-web.jpg?1407852798);
     background-size: cover;
 }
 
 #brian-grid {
     grid-area: brian;
-    background-image: url(https://i.gifer.com/77m.gif);
+    background-image: url(https://wallpaperplay.com/walls/full/2/a/f/149356.jpg);
     background-size: cover;
 }
 

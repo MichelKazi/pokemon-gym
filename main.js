@@ -4,7 +4,7 @@ let michel = new Trainer('Michel')
 
 let trainers = ["erin", "brian", "michel"]
 
-erinPokemonList = ["altaria", "reshiram", "kingdra"]
+erinPokemonList = ["altaria", "reshiram", "dragonair"]
 brianPokemonList = ["noivern", "dragalge", "kommo-o"]
 michelPokemonList = []
 
