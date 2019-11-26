@@ -75,3 +75,24 @@ body {
 .type {
     grid-area: type;
 }
+
+#erin-pokemon-party {
+    display: grid;
+
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto;
+}
+
+#michel-pokemon-party {
+    display: grid;
+
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto;
+}
+
+#brian-pokemon-party {
+    display: grid;
+
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto;
+}

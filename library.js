@@ -1,7 +1,7 @@
-export class Trainer {
+class Trainer {
     constructor(name) {
         this.name = name
-        this.team = Array.size(3).fill(0)
+        this.team = []
         //binding this keyword for methods
         // this.all = this.all.bind(this)
         // this.addPokemon = this.addPokemon.bind(this)
@@ -198,4 +198,3 @@ queryData = async (id) => {
     }
     
 }
-export default library
