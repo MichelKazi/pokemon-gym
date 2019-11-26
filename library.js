@@ -163,18 +163,16 @@ class Pokemon {
     }
 }
 
-
-
-
 async function getPokemon(pokemonName) {
     try {
         const request = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}/`)
         const response = await request.json()
         console.log(response)
-        createPokemon(response)
+        return Promise.resolve(createPokemon(response))
 
     } catch (err) {
         // error.innerHTML = "There was an error please try again."
+        console.log(err);
     }
 }
 
@@ -187,11 +185,13 @@ async function getPokemonDescription(url) {
         setDResponse(response)
     } catch (err) {
         // error.innerHTML = "There was an error please try again."
+        console.log(err);
+        
     }
 }
 
 function createPokemon(response) {
-    pokemon = new Pokemon()
+    const pokemon = new Pokemon()
 
     pokemon.setName(response["name"])
 
@@ -214,18 +214,23 @@ function createPokemon(response) {
     }
 
     //abilities
-    for (const i = 0; i < response["abilities"].length; i++) {
-        pokemon.abilities.push(response["abilities"][i]["ability"]["name"])
-    }
+    // for (const i = 0; i < response["abilities"].length; i++) {
+    //     pokemon.abilities.push(response["abilities"][i]["ability"]["name"])
+    // }
+    
+    response.abilities.map(resAbilities=> pokemon.abilities.push(resAbilities.ability.name))
+
 
     //types
-    for (const i = 0; i < response["types"].length; i++) {
-        pokemon.type.push(response["types"][i]["type"]["name"])
-    }
+    // for (const i = 0; i < response["types"].length; i++) {
+    //     pokemon.type.push(response["types"][i]["type"]["name"])
+    // }
+    response.types.map(resTypes=> resTypes.type.name )
 
     //description
     getPokemonDescription(response["species"]["url"])
 
+    return pokemon
 }
 
 function setDResponse(desc) {
