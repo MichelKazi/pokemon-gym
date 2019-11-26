@@ -5,8 +5,8 @@ let erinGrid = document.getElementById('erin-grid')
 let mainGrid = document.getElementById('main-grid')
 
 let erinPokemon1Name = document.getElementById('erin-pokemon-1-name')
-let michelPokemon1Name = document.getElementById('erin-pokemon-1-name')
-let erinPokemon1Name = document.getElementById('erin-pokemon-1-name')
+let michelPokemon1Name = document.getElementById('michel-pokemon-1-name')
+let brianPokemon1Name = document.getElementById('brian-pokemon-1-name')
 
 
 michelGrid.addEventListener('click', () => {
@@ -19,8 +19,8 @@ michelGrid.addEventListener('click', () => {
     } else {
         for(let i = 0; i < 34; i++) {
             setTimeout(() => {
-                if (mainGrid.style.gridTemplateColumns === `.33% 99.33% .33%`) {
-                    mainGrid.style.gridTemplateColumns = `.33% 99.33% .33%`
+                if (mainGrid.style.gridTemplateColumns === `0.33% 99.33% 0.33%`) {
+                    mainGrid.style.gridTemplateColumns = `0.33% 99.33% 0.33%`
                 } else {
                     mainGrid.style.gridTemplateColumns = `${33 - i}.33% ${66 + i}.33% ${33 - i}.33%`
                 }
@@ -41,8 +41,8 @@ brianGrid.addEventListener('click', () => {
     } else {
         for(let i = 0; i < 34; i++) {
             setTimeout(() => {
-                if (mainGrid.style.gridTemplateColumns === `.33% .33% 99.33%`) {
-                    mainGrid.style.gridTemplateColumns = `.33% .33% 99.33%`
+                if (mainGrid.style.gridTemplateColumns === `0.33% 0.33% 99.33%`) {
+                    mainGrid.style.gridTemplateColumns = `0.33% 0.33% 99.33%`
                 } else {
                     mainGrid.style.gridTemplateColumns = `${33 - i}.33% ${33 - i}.33% ${66 + i}.33%`
                 }
@@ -62,8 +62,8 @@ erinGrid.addEventListener('click', () => {
     } else {
         for(let i = 0; i < 34; i++) {
             setTimeout(() => {
-                if (mainGrid.style.gridTemplateColumns === `99.33% .33% .33%`) {
-                    mainGrid.style.gridTemplateColumns = `99.33% .33% .33%`
+                if (mainGrid.style.gridTemplateColumns === `99.33% 0.33% 0.33%`) {
+                    mainGrid.style.gridTemplateColumns = `99.33% 0.33% 0.33%`
                 } else {
                     mainGrid.style.gridTemplateColumns = `${66 + i}.33% ${33 - i}.33% ${33 - i}.33%`
                 }
