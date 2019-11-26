@@ -34,14 +34,6 @@ class Trainer {
 
 }
 
-
-
-
-
-
-
-
-
 class Pokemon {
     constructor () {
         this.name = ""
@@ -172,29 +164,75 @@ class Pokemon {
     }
 }
 
-queryData = async (id) => {
-    let response
-    
+
+
+
+async function getPokemon(pokemonName) {
     try {
-        response = await axios.get(`https://fizal.me/pokeapi/api/v2/${isNaN(id) ? 'name/' : 'id/'}${id}.json`)
-        const acquiredPokemon = response.data
-        
-        this.name = acquiredPokemon.name
-        this.id = acquiredPokemon.id
-        this.hp = acquiredPokemon.stats[5].base_stat// For every single Pokemon JSON, 
-        this.attack = acquiredPokemon.stats[4].base_stat // these indices for stats will
-        this.defense = acquiredPokemon.stats[3].base_stat // always be the same 
-        this.weight = acquiredPokemon.weight
-        this.spriteURL = acquiredPokemon.sprites.front_default
-        
-        this.abilities = acquiredPokemon.abilities.map(abilities => {
-            return abilities.ability.name.replace('-', ' ')
-        })
-        
-        return Promise.resolve(this)
+        const request = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}/`)
+        const response = await request.json()
+        console.log(response)
+        createPokemon(response)
+
+    } catch (err) {
+        // error.innerHTML = "There was an error please try again."
     }
-    catch (err) {
-        console.error(err)
-    }
-    
 }
+
+
+async function getPokemonDescription(url) {
+    try {
+        const request = await fetch(url)
+        const response = await request.json()
+
+        setDResponse(response)
+    } catch (err) {
+        // error.innerHTML = "There was an error please try again."
+    }
+}
+
+function createPokemon(response) {
+    pokemon = new Pokemon()
+
+    pokemon.setName(response["name"])
+
+    pokemon.setId(response["id"])
+
+    for (const i = 0; i < 6; i++) {
+        pokemon.setAStat(response["stats"][i]["stat"]["name"], response["stats"][i]["base_stat"])
+    }
+
+    pokemon.setHeight(response["height"])
+    pokemon.setWeight(response["weight"])
+
+    //pokemon img and gif
+    if (response["id"] < 722) {
+        pokemon.setGif(`https://www.pkparaiso.com/imagenes/xy/sprites/animados/${response["name"]}.gif`)
+        pokemon.setImg(response["sprites"]["front_default"])
+    } else {
+        pokemon.setImg(response["sprites"]["front_default"])
+        pokemon.setGif(response["sprites"]["front_default"])
+    }
+
+    //abilities
+    for (const i = 0; i < response["abilities"].length; i++) {
+        pokemon.abilities.push(response["abilities"][i]["ability"]["name"])
+    }
+
+    //types
+    for (const i = 0; i < response["types"].length; i++) {
+        pokemon.type.push(response["types"][i]["type"]["name"])
+    }
+
+    //description
+    getPokemonDescription(response["species"]["url"])
+
+}
+
+function setDResponse(desc) {
+    pokemon.setDescription(desc["genera"][2]["genus"])
+    pokemon.setColor(desc["color"]["name"])
+
+    // displayPokemon()
+}
+
