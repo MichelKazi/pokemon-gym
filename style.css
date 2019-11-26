@@ -88,8 +88,7 @@ body {
 
     display: grid;
 
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: auto;
+    grid-template: auto / auto auto auto;
 }
 
 #michel-pokemon-party {
@@ -97,15 +96,15 @@ body {
 
     display: grid;
 
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: auto;
+        grid-template: auto / auto auto auto;
+
 }
 
 #brian-pokemon-party {
     width: 100%;
 
     display: grid;
+    
+    grid-template: auto / auto auto auto;
 
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: auto;
 }
