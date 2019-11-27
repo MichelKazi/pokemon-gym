@@ -24,13 +24,14 @@ Promise.all([
     brian.addPokemon("dragalge"),
     brian.addPokemon("kommo-o"),
     
-erin.addPokemon("dragonair"),
-erin.addPokemon("reshiram"),
-erin.addPokemon("altaria"),
+    erin.addPokemon("dragonair"),
+    erin.addPokemon("reshiram"),
+    erin.addPokemon("altaria"),
 
-michel.addPokemon("dragonair"),
-michel.addPokemon("reshiram"),
-michel.addPokemon("altaria")])
+    michel.addPokemon("dragonair"),
+    michel.addPokemon("reshiram"),
+    michel.addPokemon("altaria")
+])
 
 .then( ()=> {
     brianDOMPokemon.names.forEach((element, i) => {  

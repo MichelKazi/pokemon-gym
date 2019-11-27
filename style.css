@@ -28,7 +28,7 @@ body {
         "gymName gymName gymName"
         "erin michel brian";
     width: 100%;
-    height: 100vh;
+    height: 30vh;
 
     margin-top: 100%;
 }
@@ -95,12 +95,12 @@ body {
     font-size: 2em;
 
     display: grid;
-    grid-template: 20% 30% 10% / auto;
+    grid-template: 20% 20% 10% / auto;
     grid-template-areas:
         "name"
         "sprite"
         "type";
-    grid-row-gap: 2%;
+    grid-row-gap: 1%;
     justify-items: center;
 }
 
