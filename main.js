@@ -8,17 +8,17 @@ const michel = new Trainer('Michel')
 const trainers = [erin, brian, michel]
 
 
-brian.addPokemon(createPokemon("noivern"))
-brian.addPokemon(createPokemon("dragalge"))
-brian.addPokemon(createPokemon("kommo-o"))
+brian.addPokemon("noivern")
+brian.addPokemon("dragalge")
+brian.addPokemon("kommo-o")
 
-erin.addPokemon(createPokemon("dragonair"))
-erin.addPokemon(createPokemon("reshiram"))
-erin.addPokemon(createPokemon("altaria"))
+erin.addPokemon("dragonair")
+erin.addPokemon("reshiram")
+erin.addPokemon("altaria")
 
-michel.addPokemon(createPokemon("dragonair"))
-michel.addPokemon(createPokemon("reshiram"))
-michel.addPokemon(createPokemon("altaria"))
+michel.addPokemon("dragonair")
+michel.addPokemon("reshiram")
+michel.addPokemon("altaria")
 
 getPokemonElements = (name) => {
     return [

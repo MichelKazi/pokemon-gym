@@ -7,12 +7,14 @@ class Trainer {
     return this.team
   }
 
-  addPokemon(pokemon) {
-    Promise.resolve(pokemon)
-    .then(res=> {
-      console.log(queryPokemon(res))
-      return this.team.push(queryPokemon(res))
+  addPokemon(name) {
+    
+    createPokemon(name).then(acquiredPokemon=>{
+      const pokemon = queryPokemon(acquiredPokemon)
+      this.team.push(pokemon)
+      return pokemon
     })
+    
   }
 
 
@@ -158,7 +160,7 @@ async function createPokemon(pokemonName) {
     let request = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}/`)
     let response = await request.json()
     console.log(response)
-    response = Promise.resolve(response)
+    
     return response
 
   } catch (err) {
@@ -194,5 +196,3 @@ function queryPokemon(response) {
 
   return pokemon
 }
-
-
