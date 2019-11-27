@@ -37,19 +37,19 @@ michel.addPokemon("guzzlord")])
         element.innerText= brian.team[i].name
     })
     brianDOMPokemon.imgs.forEach((element, i) => {
-        element.src = brian.team[i].img
+        element.src = brian.team[i].gif
     })
     erinDOMPokemon.names.forEach((element, i) => {  
         element.innerText= erin.team[i].name
     })
     erinDOMPokemon.imgs.forEach((element, i) => {
-        element.src = erin.team[i].img
+        element.src = erin.team[i].gif
     })
     michelDOMPokemon.names.forEach((element, i) => {  
         element.innerText= michel.team[i].name
     })
     michelDOMPokemon.imgs.forEach((element, i) => {
-        element.src = michel.team[i].img
+        element.src = michel.team[i].gif
     })
 
     }
