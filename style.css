@@ -5,45 +5,79 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Tribal Dragon';
+    src: url('TribalDragon.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html {
     overflow: hidden;
 }
 
 body {
     margin: 0;
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 #main-grid {
     display: grid;
-    grid-template: auto / auto auto auto;
+    grid-template: auto auto / auto auto auto;
     grid-template-areas:
+        "gymName gymName gymName"
         "erin michel brian";
     width: 100%;
     height: 100vh;
+
+    margin-top: 100%;
+}
+
+#gym-name {
+    height: 10vh;
+
+    text-align: center;
+    font-family: 'XalTerion', sans-serif;
+    grid-area: gymName;
+    font-size: 3em;
+    letter-spacing: .2em;
+    color: white;
+    font-weight: 100;
+    margin: 20px 0;
+    cursor: pointer;
+    position: absolute;
+    top:1%;
+    left: 33%;
+}
+
+.dragon {
+    font-family: 'Tribal Dragon', sans-serif;
+    font-size: 2.2em;
 }
 
 #erin-grid {
     grid-area: erin;
     background-image: url(https://external-preview.redd.it/98jgcKpucR-OEo8fdGCHN8B9cyFrjZO4tpIXCnq-gqw.jpg?auto=webp&s=4f78433eab2e39849ac3a258d48a0440b36ff41a);
-    background-size: cover;
+    
 }
 
 #michel-grid {
     grid-area: michel;
     background-image: url(https://cdnb.artstation.com/p/assets/images/images/000/164/693/large/ned-rogers-157912-white-dragon-lair-final-web.jpg?1407852798);
-    background-size: cover;
 }
 
 #brian-grid {
     grid-area: brian;
     background-image: url(https://wallpaperplay.com/walls/full/2/a/f/149356.jpg);
-    background-size: cover;
 }
 
 .trainer-col {
     height: 100vh;
-    border-left: 2px solid white;
-    border-right: 2px solid white;
+    border-left: 2px solid  rgba(0, 0, 0, 0.9);
+    border-right: 2px solid  rgba(0, 0, 0, 0.9);
+    background-size: cover;
+    background-position: 50% 100%;
+    
 }
 
 .trainer-content:hover {
@@ -61,7 +95,7 @@ body {
     font-size: 2em;
 
     display: grid;
-    grid-template: 10% 30% 10% / auto;
+    grid-template: 20% 30% 10% / auto;
     grid-template-areas:
         "name"
         "sprite"
@@ -72,11 +106,14 @@ body {
 
 .name {
     grid-area: name;
+    font-family: "XalTerion", sans-serif;
+    font-size: 1.3em;
+    margin: 2% 0 0;
 }
 
 .sprite {
     grid-area: sprite;
-    height: 120%;
+    height: 100%;
 }
 
 .type {
