@@ -76,8 +76,8 @@ body {
 
 .trainer-col {
     height: 100vh;
-    border-left: 2px solid  rgba(0, 0, 0, 0.9);;
-    border-right: 2px solid  rgba(0, 0, 0, 0.9);;
+    border-left: 2px solid  rgba(0, 0, 0, 0.9);
+    border-right: 2px solid  rgba(0, 0, 0, 0.9);
 }
 
 .trainer-content:hover {
