@@ -9,9 +9,11 @@ class Trainer {
 
   addPokemon(name) {
     
-    createPokemon(name).then(acquiredPokemon=>{
+    return createPokemon(name).then(acquiredPokemon=>{
       const pokemon = queryPokemon(acquiredPokemon)
       this.team.push(pokemon)
+      console.log(pokemon);
+      
       return pokemon
     })
     
@@ -159,7 +161,7 @@ async function createPokemon(pokemonName) {
   try {
     let request = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}/`)
     let response = await request.json()
-    console.log(response)
+  
     
     return response
 
