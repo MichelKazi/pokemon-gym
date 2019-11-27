@@ -5,21 +5,44 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Tribal Dragon';
+    src: url('TribalDragon.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html {
     overflow: hidden;
 }
 
 body {
     margin: 0;
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 #main-grid {
     display: grid;
-    grid-template: auto / auto auto auto;
+    grid-template: auto auto / auto auto auto;
     grid-template-areas:
+        "gymName gymName gymName"
         "erin michel brian";
     width: 100%;
     height: 100vh;
+}
+
+#gym-name {
+    text-align: center;
+    font-family: 'XalTerion', sans-serif;
+    grid-area: gymName;
+    font-size: 2em;
+    letter-spacing: .2em;
+    color: white;
+}
+
+.dragon {
+    font-family: 'Tribal Dragon', sans-serif;
+    font-size: 2.2em;
 }
 
 #erin-grid {
@@ -42,8 +65,8 @@ body {
 
 .trainer-col {
     height: 100vh;
-    border-left: 2px solid white;
-    border-right: 2px solid white;
+    border-left: 2px solid  rgba(0, 0, 0, 0.9);;
+    border-right: 2px solid  rgba(0, 0, 0, 0.9);;
 }
 
 .trainer-content:hover {
