@@ -35,9 +35,11 @@ body {
     text-align: center;
     font-family: 'XalTerion', sans-serif;
     grid-area: gymName;
-    font-size: 2em;
+    font-size: 3em;
     letter-spacing: .2em;
     color: white;
+    font-weight: 100;
+    margin: 20px 0;
 }
 
 .dragon {
@@ -48,25 +50,26 @@ body {
 #erin-grid {
     grid-area: erin;
     background-image: url(https://external-preview.redd.it/98jgcKpucR-OEo8fdGCHN8B9cyFrjZO4tpIXCnq-gqw.jpg?auto=webp&s=4f78433eab2e39849ac3a258d48a0440b36ff41a);
-    background-size: cover;
+    
 }
 
 #michel-grid {
     grid-area: michel;
     background-image: url(https://cdnb.artstation.com/p/assets/images/images/000/164/693/large/ned-rogers-157912-white-dragon-lair-final-web.jpg?1407852798);
-    background-size: cover;
 }
 
 #brian-grid {
     grid-area: brian;
     background-image: url(https://wallpaperplay.com/walls/full/2/a/f/149356.jpg);
-    background-size: cover;
 }
 
 .trainer-col {
     height: 100vh;
     border-left: 2px solid  rgba(0, 0, 0, 0.9);
     border-right: 2px solid  rgba(0, 0, 0, 0.9);
+    background-size: cover;
+    background-position: 50% 100%;
+    
 }
 
 .trainer-content:hover {
@@ -95,8 +98,9 @@ body {
 
 .name {
     grid-area: name;
-
-    font-size: 2em;
+    font-family: "XalTerion", sans-serif;
+    font-size: 1.3em;
+    margin: 2% 0 0;
 }
 
 .sprite {
