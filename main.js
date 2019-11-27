@@ -24,6 +24,7 @@ Promise.all([
     brian.addPokemon("dragalge"),
     brian.addPokemon("kommo-o"),
     
+<<<<<<< HEAD
     erin.addPokemon("dragonair"),
     erin.addPokemon("reshiram"),
     erin.addPokemon("altaria"),
@@ -32,25 +33,34 @@ Promise.all([
     michel.addPokemon("reshiram"),
     michel.addPokemon("altaria")
 ])
+=======
+erin.addPokemon("dragonair"),
+erin.addPokemon("reshiram"),
+erin.addPokemon("altaria"),
+
+michel.addPokemon("hydreigon"),
+michel.addPokemon("rayquaza"),
+michel.addPokemon("guzzlord")])
+>>>>>>> 913bbedaec717f8840da22bf621ea03d860f223d
 
 .then( ()=> {
     brianDOMPokemon.names.forEach((element, i) => {  
         element.innerText= brian.team[i].name
     })
     brianDOMPokemon.imgs.forEach((element, i) => {
-        element.src = brian.team[i].img
+        element.src = brian.team[i].gif
     })
     erinDOMPokemon.names.forEach((element, i) => {  
         element.innerText= erin.team[i].name
     })
     erinDOMPokemon.imgs.forEach((element, i) => {
-        element.src = erin.team[i].img
+        element.src = erin.team[i].gif
     })
     michelDOMPokemon.names.forEach((element, i) => {  
         element.innerText= michel.team[i].name
     })
     michelDOMPokemon.imgs.forEach((element, i) => {
-        element.src = michel.team[i].img
+        element.src = michel.team[i].gif
     })
 
     }
