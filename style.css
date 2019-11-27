@@ -29,15 +29,26 @@ body {
         "erin michel brian";
     width: 100%;
     height: 100vh;
+
+    margin-top: 100%;
 }
 
 #gym-name {
+    height: 10vh;
+
     text-align: center;
     font-family: 'XalTerion', sans-serif;
     grid-area: gymName;
-    font-size: 2em;
+    font-size: 3em;
     letter-spacing: .2em;
     color: white;
+
+    cursor: pointer;
+
+    position: absolute;
+
+    top:1%;
+    left: 33%;
 }
 
 .dragon {
@@ -101,7 +112,7 @@ body {
 
 .sprite {
     grid-area: sprite;
-    height: 120%;
+    height: 100%;
 }
 
 .type {

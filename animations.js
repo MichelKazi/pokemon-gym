@@ -12,6 +12,7 @@ let erinPokemon1Name = document.getElementById('erin-pokemon-1-name')
 let michelPokemon1Name = document.getElementById('michel-pokemon-1-name')
 let brianPokemon1Name = document.getElementById('brian-pokemon-1-name')
 
+let gymName = document.getElementById('gym-name')
 
 michelGrid.addEventListener('click', () => {
     if (mainGrid.style.gridTemplateColumns === `0.33% 99.33% 0.33%`) {
@@ -76,3 +77,13 @@ erinGrid.addEventListener('click', () => {
     }
     console.log("you clicked on gym leader Erin")
 })
+
+gymName.addEventListener("click", function(event) {
+    if(mainGrid.style.marginTop != "12%") {
+        for(let i = 0; i < 100; i++) {
+        setTimeout(() => {
+            mainGrid.style.marginTop = `${111 - i}%`
+        }, i * 7)
+        }
+    }
+  });
