@@ -61,7 +61,7 @@ body {
     font-size: 2em;
 
     display: grid;
-    grid-template: 10% 30% 10% / auto;
+    grid-template: 20% 30% 10% / auto;
     grid-template-areas:
         "name"
         "sprite"
@@ -70,10 +70,10 @@ body {
     justify-items: center;
 }
 
-name {
+.name {
     grid-area: name;
 
-    font-size:10%;
+    font-size: 2em;
 }
 
 .sprite {
