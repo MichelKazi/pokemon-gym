@@ -42,10 +42,8 @@ body {
     font-size: 3em;
     letter-spacing: .2em;
     color: white;
-<<<<<<< HEAD
     font-weight: 100;
     margin: 20px 0;
-=======
 
     cursor: pointer;
 
@@ -53,7 +51,6 @@ body {
 
     top:1%;
     left: 33%;
->>>>>>> 8ce41545a17159096142a0a22ecd84bf8da01a0c
 }
 
 .dragon {
