@@ -8,14 +8,13 @@ class Trainer {
   }
 
   addPokemon(pokemon) {
-    if (this.team.length > 2) {
-      return console.error(`${this.name}'s team is full!`);
-    }
-    if (!this.equipped) return this.equipped = pokemon
-    else {
-      this.team.push(pokemon)
-    }
+    Promise.resolve(pokemon)
+    .then(res=> {
+      console.log(queryPokemon(res))
+      return this.team.push(queryPokemon(res))
+    })
   }
+
 
   removePokemon(pokemon) {
     this.team = this.team.filter(p => p.id !== pokemon.id)
@@ -159,7 +158,8 @@ async function createPokemon(pokemonName) {
     let request = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}/`)
     let response = await request.json()
     console.log(response)
-    return Promise.resolve(queryPokemon(response))
+    response = Promise.resolve(response)
+    return response
 
   } catch (err) {
     console.log(err);

@@ -20,6 +20,18 @@ michel.addPokemon(createPokemon("dragonair"))
 michel.addPokemon(createPokemon("reshiram"))
 michel.addPokemon(createPokemon("altaria"))
 
-let brianFirst = document.getElementsByClassName('brian-first')
-let brianSecond = document.getElementsByClassName('brian-second')
-let brianThird = document.getElementsByClassName('brian-third')
+getPokemonElements = (name) => {
+    return [
+        [...document.querySelectorAll(`.${name}-pokemon-imgs`)], 
+        [...document.querySelectorAll(`.${name}-pokemon-name`)]
+    ]
+}
+
+let brianDOMPokemon = getPokemonElements('brian')
+let erinDOMPokemon = getPokemonElements('erin')
+let michelDOMPokemon = getPokemonElements('michel')
+
+
+brianDOMPokemon[1].forEach((element, i) => {
+    element.innerText= brian.team[i].name
+});
