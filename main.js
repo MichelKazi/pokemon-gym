@@ -28,9 +28,9 @@ erin.addPokemon("dragonair"),
 erin.addPokemon("reshiram"),
 erin.addPokemon("altaria"),
 
-michel.addPokemon("dragonair"),
-michel.addPokemon("reshiram"),
-michel.addPokemon("altaria")])
+michel.addPokemon("hydreigon"),
+michel.addPokemon("rayquaza"),
+michel.addPokemon("guzzlord")])
 
 .then( ()=> {
     brianDOMPokemon.names.forEach((element, i) => {  
