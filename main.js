@@ -22,7 +22,7 @@ const trainersInDOM = [brianDOMPokemon, erinDOMPokemon, michelDOMPokemon]
 // making sure to wait for the promises to resolve 
 
 Promise.all([
-
+<<<<<<< HEAD
   brian.addPokemon("noivern"),
   brian.addPokemon("dragalge"),
   brian.addPokemon("kommo-o"),
@@ -41,3 +41,8 @@ Promise.all([
         element.innerText = brian.team[i].name
       })
       trainersInDOM[i].imgs.forEach((element, i) => {
+        element.src = brian.team[i].gif
+      })
+    }
+
+  })
