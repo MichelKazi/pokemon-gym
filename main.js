@@ -17,15 +17,14 @@ let brianDOMPokemon = getPokemonElements('brian')
 let erinDOMPokemon = getPokemonElements('erin')
 let michelDOMPokemon = getPokemonElements('michel')
 
-const trainersInDOM = [brianDOMPokemon, erinDOMPokemon, michelDOMPokemon]
+const trainersInDOM = [erinDOMPokemon, brianDOMPokemon, michelDOMPokemon]
 
 // making sure to wait for the promises to resolve 
 
 Promise.all([
-<<<<<<< HEAD
   brian.addPokemon("noivern"),
   brian.addPokemon("dragalge"),
-  brian.addPokemon("kommo-o"),
+  brian.addPokemon("tyrantrum"),
 
   erin.addPokemon("dragonair"),
   erin.addPokemon("reshiram"),
@@ -33,16 +32,30 @@ Promise.all([
 
   michel.addPokemon("hydreigon"),
   michel.addPokemon("rayquaza"),
-  michel.addPokemon("guzzlord")])
+  michel.addPokemon("garchomp")])
 
   .then(() => {
-    for (i in trainersInDOM) {
-      trainersInDOM[i].names.forEach((element, i) => {
-        element.innerText = brian.team[i].name
-      })
-      trainersInDOM[i].imgs.forEach((element, i) => {
-        element.src = brian.team[i].gif
-      })
-    }
-
+   
+    trainersInDOM[0].names.forEach((element, i) => {
+      element.innerText = erin.team[i].name
+    })
+    trainersInDOM[0].imgs.forEach((element, i) => {
+      element.src = erin.team[i].gif
+    })
+    
+    trainersInDOM[1].names.forEach((element, i) => {
+      element.innerText = brian.team[i].name
+    })
+    trainersInDOM[1].imgs.forEach((element, i) => {
+      element.src = brian.team[i].gif
+    })
+    
+    trainersInDOM[2].names.forEach((element, i) => {
+      element.innerText = michel.team[i].name
+    })
+    trainersInDOM[2].imgs.forEach((element, i) => {
+      element.src = michel.team[i].gif
+    })
   })
+    
+      
