@@ -19,7 +19,6 @@ class Trainer {
     
   }
 
-
   removePokemon(pokemon) {
     this.team = this.team.filter(p => p.id !== pokemon.id)
 
@@ -177,7 +176,7 @@ function queryPokemon(response) {
 
   pokemon.setId(response["id"])
 
-  response.stats.map(resStat => pokemon.setAStat(resStat.stat.name, resStat.stat.base_stat))
+  response.stats.map(resStat => pokemon.setAStat(resStat.stat.name, resStat.base_stat))
 
 
   pokemon.setHeight(response["height"])
