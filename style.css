@@ -145,3 +145,11 @@ body {
     grid-template: auto / auto auto auto;
 
 }
+
+.erin-pokemon-name,
+.michel-pokemon-name, .brian-pokemon-name {
+    text-transform: capitalize;
+    /* font-family: 'XalTerion', sans-serif; */
+    font-weight: 100;
+    letter-spacing: .1em;
+}
