@@ -51,7 +51,6 @@ Promise.all([
 
 
 
-
     trainersInDOM[1].names.forEach((element, i) => {
       element.innerText = brian.team[i].name.toUpperCase()
     })

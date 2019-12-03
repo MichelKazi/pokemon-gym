@@ -114,7 +114,7 @@ body {
 
 .name {
     grid-area: name;
-    font-family: "XalTerion", sans-serif;
+    font-family: 'XalTerion', sans-serif;
     font-size: 1.3em;
     margin: 2% 0 0;
 }
