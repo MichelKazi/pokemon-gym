@@ -23,11 +23,6 @@ const trainersInDOM = [erinDOMPokemon, brianDOMPokemon, michelDOMPokemon]
 // making sure to wait for the promises to resolve 
 
 Promise.all([
-<<<<<<< HEAD
-  brian.addPokemon("noivern"),
-  brian.addPokemon("dragalge"),
-  brian.addPokemon("tyrantrum"),
-=======
     brian.addPokemon("noivern"),
     brian.addPokemon("dragalge"),
     brian.addPokemon("tyrantrum"),
@@ -35,7 +30,6 @@ Promise.all([
     erin.addPokemon("dragonair"),
     erin.addPokemon("reshiram"),
     erin.addPokemon("altaria"),
->>>>>>> 2b7fee77f015718efaf1fc6635b1b075bda1cc02
 
     michel.addPokemon("hydreigon"),
     michel.addPokemon("rayquaza"),
@@ -43,11 +37,6 @@ Promise.all([
   ])
 
   .then(() => {
-<<<<<<< HEAD
-   
-=======
-
->>>>>>> 2b7fee77f015718efaf1fc6635b1b075bda1cc02
     trainersInDOM[0].names.forEach((element, i) => {
       element.innerText = erin.team[i].name
     })
@@ -95,10 +84,4 @@ Promise.all([
        <p class="atk">Atk: ${michel.team[i].stats.attack}</p>
        <p class="def">Def: ${michel.team[i].stats.defense}</p>`
     })
-<<<<<<< HEAD
   })
-    
-      
-=======
-  })
->>>>>>> 2b7fee77f015718efaf1fc6635b1b075bda1cc02
