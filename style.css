@@ -72,7 +72,7 @@ body {
 }
 
 .trainer-col {
-    height: 100vh;
+    height: 77vh;
     border-left: 2px solid  rgba(0, 0, 0, 0.9);
     border-right: 2px solid  rgba(0, 0, 0, 0.9);
     background-size: cover;
@@ -106,7 +106,7 @@ body {
 
 .name {
     grid-area: name;
-    font-family: "XalTerion", sans-serif;
+    font-family: 'XalTerion', sans-serif;
     font-size: 1.3em;
     margin: 2% 0 0;
 }
@@ -128,13 +128,99 @@ body {
     grid-template: auto / auto auto auto;
 }
 
+.erin-team {
+    width: 100%;
+
+    display: grid;
+
+    grid-template: auto auto / auto auto auto;
+
+    grid-template-areas: "name name name"
+                         "img stat stat"
+                         "img stat stat";
+}
+
+.erin-pokemon-name {
+    grid-area: name;
+}
+
+.erin-pokemon-imgs {
+    width: 80%;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    grid-area: img;
+}
+
+.erin-pokemon-stats {
+    grid-area: stat;
+
+    display: none;
+
+    padding: 0;
+}
+
 #michel-pokemon-party {
     width: 100%;
 
     display: grid;
 
-        grid-template: auto / auto auto auto;
+    grid-template: auto/ auto auto auto;
 
+}
+
+.michel-team {
+    width: 100%;
+
+    display: grid;
+
+    grid-template: auto auto / auto auto auto;
+
+    grid-template-areas: "name name name"
+                         "img stat stat"
+                         "img stat stat";
+}
+
+.michel-pokemon-name {
+    grid-area: name;
+}
+
+.michel-pokemon-imgs {
+    width: 80%;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    grid-area: img;
+}
+
+.michel-pokemon-stats {
+    grid-area: stat;
+
+    display: none;
+
+    padding: 0;
+}
+
+.brian-team {
+    width: 100%;
+
+    display: grid;
+
+    grid-template: auto auto / auto auto auto;
+
+    grid-template-areas: "name name name"
+                         "img stat stat"
+                         "img stat stat";
 }
 
 #brian-pokemon-party {
@@ -144,4 +230,39 @@ body {
     
     grid-template: auto / auto auto auto;
 
+
+}
+
+.brian-pokemon-name {
+    grid-area: name;
+}
+
+.brian-pokemon-imgs {
+    width: 80%;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    grid-area: img;
+}
+
+.brian-pokemon-stats {
+    grid-area: stat;
+
+    display: none;
+
+    padding: 0;
+}
+
+.stats {
+    font-size: medium;
+}
+
+p {
+    padding: 0;
+    margin: 0;
 }

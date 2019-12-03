@@ -12,6 +12,10 @@ let erinPokemon1Name = document.getElementById('erin-pokemon-1-name')
 let michelPokemon1Name = document.getElementById('michel-pokemon-1-name')
 let brianPokemon1Name = document.getElementById('brian-pokemon-1-name')
 
+let erinPokemonStats = document.getElementsByClassName("erin-pokemon-stats")
+let michelPokemonStats = document.getElementsByClassName("michel-pokemon-stats")
+let brianPokemonStats = document.getElementsByClassName("brian-pokemon-stats")
+
 let gymName = document.getElementById('gym-name')
 
 michelGrid.addEventListener('click', () => {
@@ -21,6 +25,10 @@ michelGrid.addEventListener('click', () => {
                 mainGrid.style.gridTemplateColumns = `33.33% ${99 - i}.33% 33.33%`
             }, i * 5)
         }
+
+        michelPokemonStats[0].style.display = "none"
+        michelPokemonStats[1].style.display = "none"
+        michelPokemonStats[2].style.display = "none"
     } else {
         for(let i = 0; i < 34; i++) {
             setTimeout(() => {
@@ -31,6 +39,10 @@ michelGrid.addEventListener('click', () => {
                 }
             }, i * 5)
         }
+
+        michelPokemonStats[0].style.display = "block"
+        michelPokemonStats[1].style.display = "block"
+        michelPokemonStats[2].style.display = "block"
     }
     console.log("you clicked on gym leader Michel")
 
@@ -43,6 +55,10 @@ brianGrid.addEventListener('click', () => {
                 mainGrid.style.gridTemplateColumns = `33.33% 33.33% ${99 - i}.33%`
             }, i * 5)
         }
+
+        brianPokemonStats[0].style.display = "none"
+        brianPokemonStats[1].style.display = "none"
+        brianPokemonStats[2].style.display = "none"
     } else {
         for(let i = 0; i < 34; i++) {
             setTimeout(() => {
@@ -53,6 +69,10 @@ brianGrid.addEventListener('click', () => {
                 }
             }, i * 5)
         }
+
+        brianPokemonStats[0].style.display = "block"
+        brianPokemonStats[1].style.display = "block"
+        brianPokemonStats[2].style.display = "block"
     }
     console.log("you clicked on gym leader Brian")
 })
@@ -64,6 +84,11 @@ erinGrid.addEventListener('click', () => {
                 mainGrid.style.gridTemplateColumns = `${99 - i}.33% 33.33% 33.33%`
             }, i * 5)
         }
+
+        erinPokemonStats[0].style.display = "none"
+        erinPokemonStats[1].style.display = "none"
+        erinPokemonStats[2].style.display = "none"
+
     } else {
         for(let i = 0; i < 34; i++) {
             setTimeout(() => {
@@ -74,6 +99,11 @@ erinGrid.addEventListener('click', () => {
                 }
             }, i * 5)
         }
+
+        erinPokemonStats[0].style.display = "block"
+        erinPokemonStats[1].style.display = "block"
+        erinPokemonStats[2].style.display = "block"
+
     }
     console.log("you clicked on gym leader Erin")
 })

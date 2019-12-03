@@ -177,7 +177,9 @@ function queryPokemon(response) {
 
   pokemon.setId(response["id"])
 
-  response.stats.map(resStat => pokemon.setAStat(resStat.stat.name, resStat.stat.base_stat))
+  for(let i = 0; i < 6; i++){
+    pokemon.setAStat(response["stats"][i]["stat"]["name"], response["stats"][i]["base_stat"])
+  }
 
 
   pokemon.setHeight(response["height"])

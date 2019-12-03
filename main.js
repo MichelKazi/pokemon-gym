@@ -7,7 +7,8 @@ const trainers = [erin, brian, michel]
 getPokemonElements = (name) => {
   return {
     imgs: document.querySelectorAll(`.${name}-pokemon-imgs`),
-    names: document.querySelectorAll(`.${name}-pokemon-name`)
+    names: document.querySelectorAll(`.${name}-pokemon-name`),
+    stats: document.querySelectorAll(`.${name}-pokemon-stats`)
   }
 }
 
@@ -42,20 +43,45 @@ Promise.all([
     trainersInDOM[0].imgs.forEach((element, i) => {
       element.src = erin.team[i].gif
     })
+    trainersInDOM[0].stats.forEach((element, i) => {
+      element.innerHTML = `<p>Hp: ${erin.team[i].stats.hp}</p> 
+                           <br/> 
+                           <p>Atk: ${erin.team[i].stats.attack}</p> 
+                           <br/> 
+                           <p>Def: ${erin.team[i].stats.defense}</p>`
+    })
     
+
+
+
     trainersInDOM[1].names.forEach((element, i) => {
       element.innerText = brian.team[i].name
     })
     trainersInDOM[1].imgs.forEach((element, i) => {
       element.src = brian.team[i].gif
     })
-    
+    trainersInDOM[1].stats.forEach((element, i) => {
+      element.innerHTML = `<p>Hp: ${brian.team[i].stats.hp}</p> 
+                           <br/> 
+                           <p>Atk: ${brian.team[i].stats.attack}</p> 
+                           <br/> 
+                           <p>Def: ${brian.team[i].stats.defense}</p>`
+    })
+
+
+
+  
     trainersInDOM[2].names.forEach((element, i) => {
       element.innerText = michel.team[i].name
     })
     trainersInDOM[2].imgs.forEach((element, i) => {
       element.src = michel.team[i].gif
     })
+    trainersInDOM[2].stats.forEach((element, i) => {
+      element.innerHTML = `<p>Hp: ${michel.team[i].stats.hp}</p> 
+                           <br/> 
+                           <p>Atk: ${michel.team[i].stats.attack}</p> 
+                           <br/> 
+                           <p>Def: ${michel.team[i].stats.defense}</p>`
+    })
   })
-    
-      
