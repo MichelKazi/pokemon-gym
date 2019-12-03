@@ -33,16 +33,9 @@ michelGrid.addEventListener('click', () => {
                 mainGrid.style.gridTemplateColumns = `33.33% ${99 - i}.33% 33.33%`
             }, i * 5)
         }
-<<<<<<< HEAD
         michelTeam.style.display = "none"
         michelSprite.style = "justify-self: center; margin-left: 0;"
         
-=======
-
-        michelPokemonStats[0].style.display = "none"
-        michelPokemonStats[1].style.display = "none"
-        michelPokemonStats[2].style.display = "none"
->>>>>>> refs/remotes/origin/master
     } else {
         for(let i = 0; i < 34; i++) {
             setTimeout(() => {
@@ -71,15 +64,8 @@ brianGrid.addEventListener('click', () => {
                 mainGrid.style.gridTemplateColumns = `33.33% 33.33% ${99 - i}.33%`
             }, i * 5)
         }
-<<<<<<< HEAD
         brianTeam.style.display = "none"
         brianSprite.style = "justify-self: center; margin-left: 0;"
-=======
-
-        brianPokemonStats[0].style.display = "none"
-        brianPokemonStats[1].style.display = "none"
-        brianPokemonStats[2].style.display = "none"
->>>>>>> refs/remotes/origin/master
     } else {
         for(let i = 0; i < 34; i++) {
             setTimeout(() => {
@@ -107,16 +93,8 @@ erinGrid.addEventListener('click', () => {
                 mainGrid.style.gridTemplateColumns = `${99 - i}.33% 33.33% 33.33%`
             }, i * 5)
         }
-<<<<<<< HEAD
         erinTeam.style.display = "none"
         erinSprite.style = "justify-self: center; margin-left: 0;"
-=======
-
-        erinPokemonStats[0].style.display = "none"
-        erinPokemonStats[1].style.display = "none"
-        erinPokemonStats[2].style.display = "none"
-
->>>>>>> refs/remotes/origin/master
     } else {
         for(let i = 0; i < 34; i++) {
             setTimeout(() => {
