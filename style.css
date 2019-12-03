@@ -72,7 +72,7 @@ body {
 }
 
 .trainer-col {
-    height: 100vh;
+    height: 82vh;
     border-left: 2px solid  rgba(0, 0, 0, 0.9);
     border-right: 2px solid  rgba(0, 0, 0, 0.9);
     background-size: cover;
@@ -81,27 +81,35 @@ body {
 }
 
 .trainer-content:hover {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.4);
     /* width: 100vw; */
 }
 
 .trainer-content {
+    margin: 0 auto;
     width: 100%;
     height: 100%;
-    background-color: rgb(0, 0, 0, 0.5);
+    background-color: rgb(0, 0, 0, 0.6);
     color: white;
     font-family: sans-serif;
     text-align: center;
     font-size: 2em;
 
     display: grid;
-    grid-template: 20% 20% 10% / auto;
+    grid-template: 100% / auto auto;
     grid-template-areas:
-        "name"
-        "sprite"
-        "type";
+        "trainer team";
     grid-row-gap: 1%;
     justify-items: center;
+}
+
+.trainer {
+    grid-area: trainer;
+    display: grid;
+    grid-template: 20% 80% / auto;
+    grid-template-areas:
+    "name"
+    "sprite";
 }
 
 .name {
@@ -113,35 +121,96 @@ body {
 
 .sprite {
     grid-area: sprite;
-    height: 100%;
-}
-
-.type {
-    grid-area: type;
+    height: 75%;
 }
 
 #erin-pokemon-party {
     width: 100%;
-
-    display: grid;
-
-    grid-template: auto / auto auto auto;
+    display: none;
 }
 
 #michel-pokemon-party {
     width: 100%;
-
-    display: grid;
-
-        grid-template: auto / auto auto auto;
+    display: none;
 
 }
 
 #brian-pokemon-party {
     width: 100%;
+    display: none;
 
+}
+
+.trainer-party {
+    grid-area: team;
     display: grid;
-    
-    grid-template: auto / auto auto auto;
+    grid-template: 33% 33% 33% / auto;
+    grid-template-areas: 
+    "team1"
+    "team2"
+    "team3";
+    padding: 3%;
+    margin-top: 5%;
+}
 
+.team1, .team2, .team3 {
+    display: grid;
+    grid-template: 50% 50% / 50% 25% 25%;
+    grid-template-areas: 
+    "pokeSprite pokeName pokeName"
+    "pokeSprite stats stats";
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+}
+
+.team1 {
+    grid-area: team1;
+}
+
+.team2 {
+    grid-area: team2;
+}
+
+.team3 {
+    grid-area: team3;
+}
+
+.pokeName {
+    text-transform: capitalize;
+    font-family: 'XalTerion', sans-serif;
+    font-weight: 100;
+    letter-spacing: .1em;
+    grid-area: pokeName;
+    font-size: 1em;
+}
+
+.pokeSprite {
+    grid-area: pokeSprite;
+    height: 80%;
+}
+
+.stats {
+    grid-area: stats;
+    display: grid;
+    grid-template: auto auto auto;
+    grid-template-areas: "hp atk def";
+    font-size: .8em;
+    align-items: flex-start;
+}
+
+.stats p {
+    margin-right: 2em;
+}
+
+.pokeHp {
+    grid-area: hp;
+}
+
+.atk {
+    grid-area: atk;
+}
+
+.def {
+    grid-area: def;
 }

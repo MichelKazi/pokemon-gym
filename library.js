@@ -8,15 +8,15 @@ class Trainer {
   }
 
   addPokemon(name) {
-    
-    return createPokemon(name).then(acquiredPokemon=>{
+
+    return createPokemon(name).then(acquiredPokemon => {
       const pokemon = queryPokemon(acquiredPokemon)
       this.team.push(pokemon)
       console.log(pokemon);
-      
+
       return pokemon
     })
-    
+
   }
 
   removePokemon(pokemon) {
@@ -160,8 +160,8 @@ async function createPokemon(pokemonName) {
   try {
     let request = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}/`)
     let response = await request.json()
-  
-    
+
+
     return response
 
   } catch (err) {
@@ -176,7 +176,9 @@ function queryPokemon(response) {
 
   pokemon.setId(response["id"])
 
-  response.stats.map(resStat => pokemon.setAStat(resStat.stat.name, resStat.base_stat))
+  for (let i = 0; i < 6; i++) {
+    pokemon.setAStat(response["stats"][i]["stat"]["name"], response["stats"][i]["base_stat"])
+  }
 
 
   pokemon.setHeight(response["height"])
