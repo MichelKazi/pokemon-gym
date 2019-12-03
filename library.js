@@ -6,7 +6,7 @@ class Trainer {
   all() {
     return this.team
   }
-
+	
   addPokemon(name) {
 
     return createPokemon(name).then(acquiredPokemon => {
