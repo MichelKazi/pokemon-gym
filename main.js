@@ -55,5 +55,9 @@ Promise.all([
       element.src = michel.team[i].gif
     })
   })
+  
+trainers.forEach((trainer)=>{
+  trainer.team.forEach((pokemon)=>{
     
-      
+  })
+})
